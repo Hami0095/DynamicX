@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package form.v1;
+
+option go_package = "gen/go/form/v1;formv1";
+option java_multiple_files = true;
+option java_package = "com.example.form.v1";
+option java_outer_classname = "FormProto";
+
+enum QuestionType {
+  TEXT = 0;
+  RADIO = 1;
+  DATE = 2;
+}
+
+message FormRequest {
+  string form_id = 1;
+}
+
+message FormDefinition {
+  string form_id = 1;
+  string title = 2;
+  repeated FormStep steps = 3;
+}
+
+message FormStep {
+  string step_id = 1;
+  string title = 2;
+  repeated Question questions = 3;
+}
+
+message Question {
+  string question_id = 1;
+  string label = 2;
+  QuestionType type = 3;
+  repeated string options = 4;
+  bool is_required = 5;
+}
+
+message ValidationRule {
+  string rule_type = 1;
+  string value = 2;
+}
+
+message SubmitFormRequest {
+  string form_id = 1;
+  map<string, string> answers = 2;
+}
+
+message SubmitFormResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message CreateFormRequest {
+  FormDefinition form = 1;
+}
+
+message CreateFormResponse {
+  string form_id = 1;
+  string message = 2;
+}
+
+service FormService {
+  rpc GetFormSchema(FormRequest) returns (FormDefinition);
+  rpc CreateForm(CreateFormRequest) returns (CreateFormResponse);
+  rpc SubmitForm(SubmitFormRequest) returns (SubmitFormResponse);
+}

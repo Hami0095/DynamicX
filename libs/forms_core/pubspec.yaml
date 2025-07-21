@@ -1,0 +1,12 @@
+name: forms_core
+description: Shared protobuf models and networking client.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  grpc: ^4.1.0
+  protobuf: ^4.1.1
+  riverpod: ^2.6.1

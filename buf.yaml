@@ -1,0 +1,10 @@
+version: v1
+name: buf.build/your-org/dynamicxforms
+deps:
+  - buf.build/google/protobuf
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

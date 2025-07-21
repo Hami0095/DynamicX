@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "widgetbook",
+            "cwd": "apps/widgetbook",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "widgetbook (profile mode)",
+            "cwd": "apps/widgetbook",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "widgetbook (release mode)",
+            "cwd": "apps/widgetbook",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "forms_core",
+            "cwd": "libs/forms_core",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dynamicx_forms",
+            "cwd": "apps/flutter-app/dynamicx_forms",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dynamicx_forms (profile mode)",
+            "cwd": "apps/flutter-app/dynamicx_forms",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "dynamicx_forms (release mode)",
+            "cwd": "apps/flutter-app/dynamicx_forms",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
