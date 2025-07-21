@@ -16,7 +16,7 @@ DynamicXForms is a monolithic, server-driven form engine powered by **Flutter**,
 | Build Tooling | Nx (workspace orchestrator)    |
 
 ---
-```
+
 ## 📦 Folder Structure
 
 ```
